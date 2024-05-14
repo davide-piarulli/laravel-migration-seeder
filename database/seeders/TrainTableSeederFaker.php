@@ -16,7 +16,7 @@ class TrainTableSeederFaker extends Seeder
     public function run(Faker $faker): void
     {
         //passo nuova istanza del faker come parametro del metodo run
-        for ($i = 0; $i < 25; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $new_train = new Train();
             $new_train->travel_company = $faker->words(1, true);
             $new_train->departure_station = $faker->city();

@@ -3,7 +3,7 @@
 @section('content')
   <h1>Tabellone Partenze</h1>
   {{-- @dd($trains); --}}
-  <table class="table">
+  <table class="table container">
     <thead>
       <tr>
         <th scope="col">Compagnia</th>
@@ -31,4 +31,8 @@
       @endforeach
     </tbody>
   </table>
+
+  <div class="container">
+    {{ $trains->links() }}
+  </div>
 @endsection

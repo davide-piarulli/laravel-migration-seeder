@@ -20,7 +20,7 @@ class PageController extends Controller
 
     public function trains()
     {
-        $trains = Train::all();
+        $trains = Train::paginate();
 
         return view('trains', compact('trains'));
     }
