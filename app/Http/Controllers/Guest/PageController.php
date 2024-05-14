@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Train;
 
 class PageController extends Controller
 {
@@ -15,5 +16,12 @@ class PageController extends Controller
     public function newpage()
     {
         return view('new-page');
+    }
+
+    public function trains()
+    {
+        $trains = Train::all();
+
+        return view('trains', compact('trains'));
     }
 }
